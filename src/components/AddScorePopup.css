@@ -1,0 +1,56 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #BBDEFB; /* Pastel blue */
+  padding: 20px;
+  border: 1px solid #90CAF9; /* Light pastel blue */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup label {
+  margin-bottom: 15px; /* Adjusted for better spacing */
+  color: #0D47A1; /* Deep blue */
+  font-weight: bold; /* Add some emphasis */
+  display: flex;
+  flex-direction: column; /* Stack label text and input */
+}
+
+.popup span {
+  margin-bottom: 5px; /* Space between label and input */
+}
+
+.popup input {
+  padding: 10px;
+  border: 1px solid #90CAF9; /* Light pastel blue */
+  border-radius: 5px;
+  width: 100%; /* Ensure inputs take full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.popup button {
+  background-color: #0D47A1; /* Deep blue */
+  color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Full-width button */
+  margin-top: 10px; /* Space between buttons */
+}
+
+.popup button:hover {
+  background-color: #0B3D91; /* Slightly darker deep blue */
+}
+
+.button1 {
+  margin-top: 10px; /* Space for buttons */
+}
