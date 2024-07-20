@@ -8,7 +8,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   padding: 20px;
-  color: #ffffff;
+  color: #141212;
 }
 
 .leaderboard h1 {
@@ -61,15 +61,16 @@
 
 @keyframes highlight {
   0% {
-    background-color: #0047ab;
+    background-color: #0047ab; /* Starting color */
     transform: scale(1);
   }
   50% {
-    background-color: #00a2ff;
+    background-color: #00a2ff; /* Highlight color */
     transform: scale(1.1);
   }
   100% {
-    background-color: #0047ab;
+    background-color: #0047ab; /* Ending color */
     transform: scale(1);
   }
 }
+
