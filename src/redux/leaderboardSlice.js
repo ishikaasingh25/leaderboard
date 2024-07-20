@@ -1,11 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { v4 as uuidv4 } from 'uuid';
 
 const leaderboardSlice = createSlice({
   name: 'leaderboard',
   initialState: [],
   reducers: {
     addScore: (state, action) => {
-      state.push(action.payload);
+      const { username, score } = action.payload;
+      const newScore = {
+        key: uuidv4(), // Generate a unique key
+        username,
+        score
+      };
+      state.push(newScore);
       state.sort((a, b) => {
         const [aMin, aSec, aMs] = a.score.split(':').map(Number);
         const [bMin, bSec, bMs] = b.score.split(':').map(Number);

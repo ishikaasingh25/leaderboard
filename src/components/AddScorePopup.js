@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addScore } from '../redux/leaderboardSlice';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './AddScorePopup.css'; // Ensure this is imported if in a separate CSS file
 
 const AddScorePopup = () => {
@@ -10,6 +9,7 @@ const AddScorePopup = () => {
   const [score, setScore] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const isValidScore = /^\d{2}:\d{2}:\d{3}$/.test(score);
@@ -20,7 +20,7 @@ const AddScorePopup = () => {
     dispatch(addScore({ username, score }));
     setUsername('');
     setScore('');
-    navigate('/');
+    navigate('/'); // Redirect to the leaderboard after adding a score
   };
 
   return (
